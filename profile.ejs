@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <style>
+             body{ background-color: cadetblue;font-family: Verdana; color: #fbeded; padding: auto;}
+             h1{font-size: 48px;text-transform: uppercase;letter-spacing: 2px;text-align: center;}
+             h2{font-size: 48px;text-transform: uppercase;letter-spacing: 2px;text-align: center;}
+             p{font-size: 16px;text-align: center;}
+         </style>
+    </head>
+            <title>new website</title>
+    <body>
+        <%-include("./partials/nav.ejs") %>
+       <h1>welcome to our profile <%= person %></h1>
+       <p><strong>age:</strong><%= data.age %></p>
+       <p><strong>job:</strong><%= data.job %></p>
+        <ul>
+            <h2>Hobbies</h2>
+        <% data.hobbies.forEach(function(item){ %>
+            <li><%= item %></li>
+
+          <% }); %>  
+        </ul>
+
+    </body>
+</html>
